@@ -1,0 +1,85 @@
+<!--
+Web Programming II, CSIT-207
+Project part 1
+
+Fred Animal Shelter Adopt Page
+Author: Jiwon Chae and Hannah Lombardi
+Date: 3/2/2025
+
+File Name: adopt.html
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Fred Animal Shelter</title>
+   <link href="base.css" rel="stylesheet" />
+   <link href="styles.css" rel="stylesheet" />
+   <link href="layout.css" rel="stylesheet" />
+   
+   <script>
+    function adoptForm() {
+         let name = document.getElementById("name").value;
+         let email = document.getElementById("email").value;
+         let phone = document.getElementById("phone").value;
+         let pet = document.getElementById("pet").value;
+
+         if (name == "" || email == "" || phone == "" || pet == "") {
+            alert("Please fill in all required fields.");
+            return false;
+         }
+         alert("Adoption request submitted successfully!");
+         return true;
+      }
+   </script>
+
+</head>
+
+<body>
+   <img id="logo" src="fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
+
+   <nav class="horizontal">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li class="active"><a href="adopt.html">Adopt</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+    </ul>
+   </nav>
+
+
+   <section>
+    <h1>Adopt a Pet</h1>
+      <p>Fill out the form below to start the adoption process.</p>
+      
+      <form onsubmit="return adoptForm()">
+         <label for="name">Full Name:</label>
+         <input type="text" id="name" name="name" required>
+
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+
+         <label for="phone">Phone Number:</label>
+         <input type="tel" id="phone" name="phone" required>
+
+         <label for="pet">Select a Pet:</label>
+         <select id="pet" name="pet" required>
+            <option value="">-- Choose a Pet --</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+         </select>
+
+         <button type="submit">Submit Adoption Request</button>
+      </form>  
+
+   </section>
+
+
+   <footer>
+      Fred Animal Shelter; &copy; 2025 All Rights Reserved
+   </footer>
+</body>
+</html>
