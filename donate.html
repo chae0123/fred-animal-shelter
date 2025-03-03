@@ -18,8 +18,47 @@ File Name: donate.html
    <link href="styles.css" rel="stylesheet" />
    <link href="layout.css" rel="stylesheet" />
 </head>
-
+<title>Donate - Fred Animal Shelter</title>
+    <link href="base.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="layout.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: rgb(198, 217, 235);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #donate-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #2c67e3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #1b4bb7;
+        }
+    </style>
+</head>
 <body>
+
     <img id="logo" src="fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
     <nav class="horizontal">
@@ -30,9 +69,38 @@ File Name: donate.html
             <li><a href="adopt.html">Adopt</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
         </ul>
-       </nav>
-</body>
+    </nav>
 
+    <div id="donate-container">
+        <h2>Support Fred Animal Shelter</h2>
+        <p>Your generous donation helps us provide food, shelter, and medical care to animals in need. Thank you for your support!</p>
+
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+            <label for="amount">Donation Amount</label>
+            <select id="amount" name="amount" required>
+                <option value="">Select an amount</option>
+                <option value="10">$10</option>
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+                <option value="custom">Custom Amount</option>
+            </select>
+
+            <label for="message">Message (optional)</label>
+            <input type="text" id="message" name="message" placeholder="Leave us a note!">
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
 <footer>
     Fred Animal Shelter; &copy; 2025 All Rights Reserved
  </footer>
