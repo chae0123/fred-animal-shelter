@@ -6,7 +6,7 @@ Fred Animal Shelter Volunteer Page
 Author: Jiwon Chae and Hannah Lombardi
 Date: 3/2/2025
 
-File Name: adopt.html
+File Name: volunteer.html
 
 -->
 
@@ -14,7 +14,7 @@ File Name: adopt.html
 <html lang="en">
 <head>
    <meta charset="utf-8" />
-   <title>Fred Animal Shelter</title>
+   <title>Volunteer</title>
    <link href="base.css" rel="stylesheet" />
    <link href="styles.css" rel="stylesheet" />
    <link href="layout.css" rel="stylesheet" />
@@ -60,21 +60,21 @@ File Name: adopt.html
    </nav>
 
 
-   <section>
+   <div class="form-container">
     <h1>Become a Volunteer</h1>
       <p>Fill out the form below to sign up as a volunteer.</p>
 
       <form onsubmit="return volunteerForm()">
-         <label for="vol_name">Full Name:</label>
+         <label for="vol_name">Full Name</label>
          <input type="text" id="vol_name" name="vol_name" required>
 
-         <label for="vol_age">Age:</label>
+         <label for="vol_age">Age</label>
          <input type="number" id="vol_age" name="vol_age" required>
 
-         <label for="vol_email">Email:</label>
+         <label for="vol_email">Email</label>
          <input type="email" id="vol_email" name="vol_email" required>
 
-         <label>Availability:</label>
+         <label>Availability</label>
          <input type="radio" id="weekdays" name="availability" value="Weekdays">
          <label for="weekdays">Weekdays</label>
          <input type="radio" id="weekends" name="availability" value="Weekends">
@@ -84,7 +84,7 @@ File Name: adopt.html
 
          <button type="submit">Submit Volunteer Request</button>
       </form>
-   </section>
+   </div>
 
 
    <footer>

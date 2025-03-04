@@ -14,7 +14,7 @@ File Name: adopt.html
 <html lang="en">
 <head>
    <meta charset="utf-8" />
-   <title>Fred Animal Shelter</title>
+   <title>Adopt</title>
    <link href="base.css" rel="stylesheet" />
    <link href="styles.css" rel="stylesheet" />
    <link href="layout.css" rel="stylesheet" />
@@ -51,21 +51,21 @@ File Name: adopt.html
    </nav>
 
 
-   <section>
+   <div class="form-container">
     <h1>Adopt a Pet</h1>
       <p>Fill out the form below to start the adoption process.</p>
       
       <form onsubmit="return adoptForm()">
-         <label for="name">Full Name:</label>
+         <label for="name">Full Name</label>
          <input type="text" id="name" name="name" required>
 
-         <label for="email">Email:</label>
+         <label for="email">Email</label>
          <input type="email" id="email" name="email" required>
 
-         <label for="phone">Phone Number:</label>
+         <label for="phone">Phone Number</label>
          <input type="tel" id="phone" name="phone" required>
 
-         <label for="pet">Select a Pet:</label>
+         <label for="pet">Select a Pet</label>
          <select id="pet" name="pet" required>
             <option value="">-- Choose a Pet --</option>
             <option value="Dog">Dog</option>
@@ -75,7 +75,7 @@ File Name: adopt.html
          <button type="submit">Submit Adoption Request</button>
       </form>  
 
-   </section>
+   </div>
 
 
    <footer>
