@@ -101,11 +101,12 @@ aside p {
     flex-direction: column;
     align-items: center;  /* Centers everything horizontally */
     text-align: center;
+	margin-top: 20px;
     width: 100%;
     margin: 0 200px;
 }
 
-/* Apply to the form */
+/* the form */
 form {
     max-width: 500px;
     width: 100%;

@@ -121,6 +121,11 @@ section {
    text-align: center;
 }
 
+.form-container h1 {
+   font-size: 2rem;  /* Adjust as needed */
+   font-weight: bold;
+   color: #2c3e50; /* Darker color for better visibility */
+}
 
 
 /* Footer Styles */
