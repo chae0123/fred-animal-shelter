@@ -12,33 +12,39 @@ File Name: donate.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Metadata and linked stylesheets for consistent styling across the site. -->
    <meta charset="utf-8" />
    <title>Donate</title>
    <link href="base.css" rel="stylesheet" />
    <link href="styles.css" rel="stylesheet" />
    <link href="layout.css" rel="stylesheet" />
 
-   <script> <!--Form for the user to fill out in order to donate.-->
+   <!-- JavaScript function to validate the donation form before submission. -->
+   <script>
     function donateForm() {
          let name = document.getElementById("donor_name").value;
          let email = document.getElementById("donor_email").value;
          let amount = document.getElementById("amount").value;
 
+         // Check if any fields are left empty.
          if (name == "" || email == "" || amount == "") {
             alert("Please fill in all required fields.");
-            return false;
+            return false;// Prevents form submission if fields are incomplete.
          }
          alert("Thank you for your donation!");
-         return true;
+         return true;// Form is successfully submitted.
       }
    </script>
 </head>
 
 <body>
+   <!-- Site logo displayed at the top of the page. -->
    <img id="logo" src="fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
-   <nav class="horizontal"> <!--Navigation bar-->
+   <!-- Main site navigation menu. -->
+   <nav class="horizontal">
     <ul>
+        <!-- List of navigation links. -->
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="active"><a href="donate.html">Donate</a></li> <!-- Highlights the active link on the nav bar.-->
@@ -47,20 +53,25 @@ File Name: donate.html
     </ul>
    </nav>
 
+   <!-- Container for the donation form and supporting information. -->
    <div class="form-container"> 
     <h1>Support Fred Animal Shelter</h1>
       <p>Your generous donation helps us provide food, shelter, and medical care to animals in need.</p>
 
+      <!-- Donation form for user input. -->
       <form onsubmit="return donateForm()">
+         <!-- Full Name input field. -->
          <label for="donor_name">Full Name</label>
-         <input type="text" id="donor_name" name="donor_name" required><!--Allows user to put in their full name.-->
-
+         <input type="text" id="donor_name" name="donor_name" required>
+         
+         <!-- Email input field. -->
          <label for="donor_email">Email</label>
-         <input type="email" id="donor_email" name="donor_email" required><!--Allows user to put in their email.-->
+         <input type="email" id="donor_email" name="donor_email" required>
 
+         <!-- Dropdown menu for selecting donation amount. -->
          <label for="amount">Donation Amount</label>
          <select id="amount" name="amount" required>
-            <option value="">Select an amount</option><!--Allows user to choose an amount they would like to donate.-->
+            <option value="">Select an amount</option>
             <option value="10">$10</option>
             <option value="25">$25</option>
             <option value="50">$50</option>
@@ -68,11 +79,13 @@ File Name: donate.html
             <option value="custom">Custom Amount</option>
          </select>
 
-         <button type="submit">Donate Now</button><!--Submit Button-->
+         <!--Submit Button-->
+         <button type="submit">Donate Now</button>
       </form>
    </div>
 
-   <footer><!--Copyright note.-->
+   <!-- Footer section with copyright information. -->
+   <footer>
       Fred Animal Shelter; &copy; 2025 All Rights Reserved
    </footer>
 </body>
