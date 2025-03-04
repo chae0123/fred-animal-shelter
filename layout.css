@@ -119,3 +119,12 @@ form {
     align-items: center;
     text-align: center;
 }
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers everything horizontally */
+    text-align: center;
+    width: 100%;
+    margin: 0 200px;
+}
