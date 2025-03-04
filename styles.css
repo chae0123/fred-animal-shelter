@@ -13,43 +13,50 @@
 */
 
 /* Window and Body Styles */
+/* Sets the background color for the entire HTML document */
 html {
    background-color: rgb(255, 253, 208);
 }
 
+/* Styles the body, setting background color and font */
 body {
    background-color: rgb(198, 217, 235);
    font-family: Verdana, Geneva, Arial, sans-serif; 
 }
 
-/* Horizontal Navigation List Styles */
+/* ======== Navigation Bar ======== */
+
+/* Styles for the navigation bar */
 nav.horizontal ul li {
    background-color: rgb(18, 31, 102);  
    font-size: 0.9em;
    padding: 10px 0;
    text-align: center;     
 }
+/* Styles the active page link */
 nav.horizontal li.active a {
    font-weight: bold;
    text-decoration: underline;
 }
 
+/* Default link colors in the navigation */
 nav.horizontal a:link, nav.horizontal a:visited {
    color: rgb(250, 238, 218);
 }
-
+/* Changes color when hovering or clicking */
 nav.horizontal a:hover, nav.horizontal a:active {
    color: rgb(255, 255, 64);
 }
 
 
+/* ======== Section Styling ======== */
 /* Topics Styles */
 section {
    margin-top: 20px;
    margin-bottom: 20px;
 }
 
-
+/* Styles for section paragraphs */
 section p {
    color: rgb(95, 114, 232);
    font-size: 0.8em;
@@ -77,14 +84,16 @@ form {
    gap: 15px;
 }
 
+/* Labels for form inputs */
 form label {
    font-weight: bold;
    font-size: 1rem;
    color: #333;
 }
 
+/* Styling for input fields and dropdowns */
 form input, form select {
-   width: 100%;
+   width: 60%;
    padding: 10px;
    border: 1px solid #ccc;
    border-radius: 5px;
@@ -92,12 +101,14 @@ form input, form select {
    transition: 0.3s;
 }
 
+/* Focus styles when input is selected */
 form input:focus, form select:focus {
    border-color: #2c67e3;
    outline: none;
    box-shadow: 0 0 5px rgba(44, 103, 227, 0.5);
 }
 
+/* Styles for form buttons */
 form button {
    background-color: #2c67e3;
    color: white;
@@ -122,7 +133,7 @@ section {
 }
 
 .form-container h1 {
-   font-size: 2rem;  /* Adjust as needed */
+   font-size: 2rem;
    font-weight: bold;
    color: #2c3e50; /* Darker color for better visibility */
 }
@@ -137,6 +148,7 @@ footer {
    text-align: center;
 }
 
+/* Styles the heading inside the about page container */
 .about-container h2 {
    font-size: 20px;
    font-weight: bold;
@@ -144,6 +156,7 @@ footer {
    padding: 20px;
 }
 
+/* Adjusts paragraph spacing inside the about page container */
 .about-container p {
    line-height: 1.5em;
 }

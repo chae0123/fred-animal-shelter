@@ -20,6 +20,7 @@ File Name: volunteer.html
    <link href="layout.css" rel="stylesheet" />
 
 
+   <!-- JavaScript function to validate the volunteer sign-up form -->
    <script>
     function volunteerForm() {
          let name = document.getElementById("vol_name").value;
@@ -27,11 +28,13 @@ File Name: volunteer.html
          let email = document.getElementById("vol_email").value;
          let availability = document.querySelector('input[name="availability"]:checked');
 
+         // Ensure all required fields are filled before submission
          if (name == "" || email == "" || age == "" || !availability) {
             alert("Please fill in all required fields.");
             return false;
          }
 
+         // Ensure volunteer is at least 12 years old
          if (age < 12) {
             alert("You must be at least 12 years old to volunteer.");
             return false;
@@ -60,27 +63,32 @@ File Name: volunteer.html
    </nav>
 
 
+   <!-- Volunteer form container -->
    <div class="form-container">
     <h1>Become a Volunteer</h1>
       <p>Fill out the form below to sign up as a volunteer.</p>
 
       <form onsubmit="return volunteerForm()">
+         <!-- Full Name Field -->
          <label for="vol_name">Full Name</label>
          <input type="text" id="vol_name" name="vol_name" required>
 
+         <!-- Age Field -->
          <label for="vol_age">Age</label>
          <input type="number" id="vol_age" name="vol_age" required>
 
+         <!-- Email Field -->
          <label for="vol_email">Email</label>
          <input type="email" id="vol_email" name="vol_email" required>
 
+         <!-- Availability Selection (Weekdays, Weekends, Anytime) -->
          <label>Availability</label>
-         <input type="radio" id="weekdays" name="availability" value="Weekdays">
          <label for="weekdays">Weekdays</label>
-         <input type="radio" id="weekends" name="availability" value="Weekends">
+         <input type="radio" id="weekdays" name="availability" value="Weekdays">
          <label for="weekends">Weekends</label>
-         <input type="radio" id="anytime" name="availability" value="Anytime">
+         <input type="radio" id="weekends" name="availability" value="Weekends">
          <label for="anytime">Anytime</label>
+         <input type="radio" id="anytime" name="availability" value="Anytime">
 
          <button type="submit">Submit Volunteer Request</button>
       </form>

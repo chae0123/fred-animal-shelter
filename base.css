@@ -12,11 +12,13 @@
 
 */
 
+/* Ensures all block-level elements behave consistently across browsers */
 article, aside, figcaption, figure,
 footer, header, main, nav, section { 
    display: block;
 }
 
+/* Removes default margins, padding, and borders from common HTML elements */
 address, article, aside, blockquote, body, cite, 
 div, dl, dt, dd, em, figcaption, figure, footer, 
 h1, h2, h3, h4, h5, h6, header, html, img, 
@@ -24,20 +26,23 @@ li, main, nav, ol, p, section, span, ul {
    margin: 0;
    padding: 0;
    border: 0;
-   font-size: 100%;
-   vertical-align: baseline;
-   background: transparent; 
+   font-size: 100%; /* Prevents browsers from applying different font sizes */
+   vertical-align: baseline; /* consistent inline element positioning */
+   background: transparent; /* Removes any default background styling */
 }
 
+/* Removes bullet points from navigation lists */
 nav ul {
    list-style: none;
    list-style-image: none;
 }
 
+/* Removes default text underline from navigation links */
 nav a {
    text-decoration: none;
 }
 
+/* Sets default line height for the body */
 body {
-   line-height: 1;
+   line-height: 1.5;
 }

@@ -18,6 +18,7 @@ html {
 	height: 100%;
 }
 
+/* Defines body width constraints and centers content */
 body {
 	width: 95%;
 	min-width: 640px;
@@ -26,33 +27,39 @@ body {
 	margin-left: auto;
 	min-height: 100%
 }
+/* images are displayed as block elements */
 img {
 	display: block;
 }
 
 /* CSS Grid Styles */
 
+/* Uses CSS Grid to structure the body layout */
 body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 }
 
+/* the logo spans across all 4 columns */
 img#logo {
 	grid-column: span 4;
 	width: 100%;
 	display: block;
 }
 
+/* navigation and footer span the full width */
 nav.horizontal, footer {
 	grid-column: span 4;
 }
 
+/* Positions customer sections */
 aside {
 	grid-column: span 2;
 }
 
 /* Horizontal Navigation List Styles */
 
+/* defines navigation list items to be evenly spaced */
 nav.horizontal li {
 	display: block;
 	float: left;
@@ -62,32 +69,35 @@ nav.horizontal li {
 
 /* Section Styles */
 
+/* Controls image size within sections */
 section img {
 	width: 50%;
 	margin: 0 auto;
 }
 
+/* Centers text inside sections */
 section p {
 	width: 70%;
 	margin: 0 auto;
 }
 
 /* Customer Comment Styles */
-
+/* Sets width and spacing for the testimonial sections */
 aside {
 	width: 75%;
 	padding-bottom: 30px;
 }
-
+/* Aligns odd-numbered asides to the end */
 aside:nth-of-type(odd) {
 	justify-self: end;
 }
-
+/* Controls the size and float positioning of customer images */
 aside img {
 	float: left;
 	width:20%;
 }
 
+/* Styles customer comment text */
 aside p {
 	float: left;
 	width:75%;
@@ -106,7 +116,8 @@ aside p {
     margin: 0 200px;
 }
 
-/* the form */
+/*  Form Layout Styling ======== */
+/* Centers the form inside a container */
 form {
     max-width: 500px;
     width: 100%;
@@ -120,6 +131,7 @@ form {
     text-align: center;
 }
 
+/* Centers content in the about page */
 .about-container {
     display: flex;
     flex-direction: column;
@@ -127,4 +139,15 @@ form {
     text-align: center;
     width: 100%;
     margin: 0 200px;
+}
+
+@media (max-width: 768px) {
+	/* makes navigation stack vertically on small screens */
+    nav.horizontal ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav.horizontal li {
+        width: 100%;
+    }
 }
