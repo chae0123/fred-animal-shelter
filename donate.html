@@ -37,11 +37,11 @@ File Name: donate.html
 <body>
    <img id="logo" src="fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
-   <nav class="horizontal">
+   <nav class="horizontal"> <!--Navigation bar-->
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="active"><a href="donate.html">Donate</a></li> <!-- Highlights the active link on the nav bar -->
+        <li class="active"><a href="donate.html">Donate</a></li> <!-- Highlights the active link on the nav bar.-->
         <li><a href="adopt.html">Adopt</a></li>
         <li><a href="volunteer.html">Volunteer</a></li>
     </ul>
@@ -53,14 +53,14 @@ File Name: donate.html
 
       <form onsubmit="return donateForm()">
          <label for="donor_name">Full Name</label>
-         <input type="text" id="donor_name" name="donor_name" required>
+         <input type="text" id="donor_name" name="donor_name" required><!--Allows user to put in their full name.-->
 
          <label for="donor_email">Email</label>
-         <input type="email" id="donor_email" name="donor_email" required>
+         <input type="email" id="donor_email" name="donor_email" required><!--Allows user to put in their email.-->
 
          <label for="amount">Donation Amount</label>
          <select id="amount" name="amount" required>
-            <option value="">Select an amount</option>
+            <option value="">Select an amount</option><!--Allows user to choose an amount they would like to donate.-->
             <option value="10">$10</option>
             <option value="25">$25</option>
             <option value="50">$50</option>
@@ -68,11 +68,11 @@ File Name: donate.html
             <option value="custom">Custom Amount</option>
          </select>
 
-         <button type="submit">Donate Now</button>
+         <button type="submit">Donate Now</button><!--Submit Button-->
       </form>
    </div>
 
-   <footer>
+   <footer><!--Copyright note.-->
       Fred Animal Shelter; &copy; 2025 All Rights Reserved
    </footer>
 </body>
