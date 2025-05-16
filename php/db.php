@@ -1,5 +1,5 @@
 <?php
-// db.php — connects to the MySQL database using mysqli
+// db.php — connects to the MySQL database using mysqli using XAMPP
 
 $host = 'localhost';       
 $db   = 'animal_shelter';
