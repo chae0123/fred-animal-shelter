@@ -52,36 +52,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
    <meta charset="utf-8" />
    <title>Adopt</title>
-   <link href="../base.css" rel="stylesheet" />
-   <link href="../styles.css" rel="stylesheet" />
-   <link href="../layout.css" rel="stylesheet" />
-   
-   <!-- JavaScript function to validate the adoption form -->
-   <script>
-    function adoptForm() {
-         let name = document.getElementById("name").value;
-         let email = document.getElementById("email").value;
-         let phone = document.getElementById("phone").value;
-         let pet = document.getElementById("pet").value;
-
-         // Ensure all fields are filled before submission
-         if (name == "" || email == "" || phone == "" || pet == "") {
-            alert("Please fill in all required fields.");
-            return false;
-         }
-         alert("Adoption request submitted successfully!");
-         return true;
-      }
-   </script>
+   <link href="../css/base.css" rel="stylesheet" />
+   <link href="../css/styles.css" rel="stylesheet" />
+   <link href="../css/layout.css" rel="stylesheet" />
 
 </head>
 
 <body>
-   <img id="logo" src="../fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
+   <img id="logo" src="../images/fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
    <nav class="horizontal">
     <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../donate.html">Donate</a></li>
         <li class="active"><a href="adopt.php">Adopt</a></li>

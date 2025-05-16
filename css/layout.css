@@ -34,11 +34,7 @@ img {
 
 /* CSS Grid Styles */
 
-/* Uses CSS Grid to structure the body layout */
-body {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-}
+
 
 /* the logo spans across all 4 columns */
 img#logo {

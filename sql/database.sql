@@ -35,6 +35,15 @@ CREATE TABLE IF NOT EXISTS adoption_requests (
     FOREIGN KEY (pet_id) REFERENCES pets(id) ON DELETE CASCADE
 );
 
+CREATE TABLE TABLE IF NOT EXISTS donations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    card_last4 VARCHAR(4),
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 
 -- Sample users
 INSERT INTO users (username, email, password) VALUES
@@ -51,3 +60,4 @@ INSERT INTO pets (name, species, breed, age, status, image_url) VALUES
 INSERT INTO adoption_requests (user_id, pet_id, message) VALUES
 (1, 1, 'I would love to adopt Max!'),
 (2, 2, 'Whiskers is adorable! I have a great home.');
+

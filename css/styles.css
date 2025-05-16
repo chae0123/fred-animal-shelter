@@ -160,3 +160,85 @@ footer {
 .about-container p {
    line-height: 1.5em;
 }
+
+.user-session {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.user-profile.top-profile {
+    width: 200px;
+    margin: 2rem 0 2rem auto; /* aligns it to the right */
+    margin-right: 1rem; /* adds space from right edge */
+    text-align: center;
+    background-color: #a6caffee;
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+    display: flex;                /* enables flexbox */
+    flex-direction: column;      /* stack items vertically */
+    align-items: center;         /* center children horizontally */
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #999;
+    margin-bottom: 1em;
+}
+
+.user-profile h2 {
+    margin: 0.5em 0 0.2em 0;
+}
+
+.user-profile .bio {
+    font-size: 1rem;
+    color: #333;
+}
+
+.intro-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   padding: 2rem 0;
+}
+
+.intro-box {
+   background-color: #fff;
+   padding: 1.5rem;
+   text-align: center;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.intro-box img {
+   width: 60px;
+   margin-bottom: 1rem;
+}
+
+.intro-box p {
+   font-size: 0.9em;
+   color: rgb(95, 114, 232);
+}
+
+.right-align-session {
+   width: 400px;
+   margin: 4rem 0 0 auto;
+   margin-right: 1rem;
+   text-align: right;
+   font-size: 20px;
+}
+
+.right-align-session .welcome-line {
+   margin: 0;
+   font-weight: bold;
+}
+
+.right-align-session .session-links {
+   margin: 0.2em 0 0 0;
+}
+
