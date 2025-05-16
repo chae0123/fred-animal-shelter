@@ -1,3 +1,5 @@
+-- database.sql
+
 -- Create the database
 CREATE DATABASE IF NOT EXISTS animal_shelter;
 USE animal_shelter;
@@ -35,7 +37,8 @@ CREATE TABLE IF NOT EXISTS adoption_requests (
     FOREIGN KEY (pet_id) REFERENCES pets(id) ON DELETE CASCADE
 );
 
-CREATE TABLE TABLE IF NOT EXISTS donations (
+-- 4. Donations table
+CREATE TABLE IF NOT EXISTS donations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -44,11 +47,22 @@ CREATE TABLE TABLE IF NOT EXISTS donations (
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 5. Volunteers table
+CREATE TABLE IF NOT EXISTS volunteers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    availability VARCHAR(20) NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 -- Sample users
+-- using PHP password_hash()
+-- password: test123
 INSERT INTO users (username, email, password) VALUES
-('alice', 'alice@example.com', 'hashedpassword1'),
-('bob', 'bob@example.com', 'hashedpassword2');
+('alice', 'alice@example.com', '$2y$10$OemCKYyDqLJbUJv6V6ScWuM3yTqDsdhmtNU1up7kxFxTk6CQwON8y'),
+('bob', 'bob@example.com', '$2y$10$YyK0SDg9FZ9L8vJzFGhDsez3vDeqKdNKuNRYMe0B9I0csTY0Nv1pK');
 
 -- Sample pets
 INSERT INTO pets (name, species, breed, age, status, image_url) VALUES
@@ -61,3 +75,12 @@ INSERT INTO adoption_requests (user_id, pet_id, message) VALUES
 (1, 1, 'I would love to adopt Max!'),
 (2, 2, 'Whiskers is adorable! I have a great home.');
 
+-- Sample donations
+INSERT INTO donations (name, email, amount, card_last4) VALUES
+('Jane Doe', 'jane@example.com', 25.00, '1234'),
+('John Smith', 'john@example.com', 100.00, '5678');
+
+-- Sample volunteers
+INSERT INTO volunteers (name, age, email, availability) VALUES
+('Emily Clark', 19, 'emily@example.com', 'Weekdays'),
+('David Lee', 22, 'david@example.com', 'Anytime');

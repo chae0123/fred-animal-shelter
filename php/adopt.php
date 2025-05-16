@@ -9,7 +9,6 @@ Date: 3/2/2025
 http://localhost/fred-animal-shelter/php/adopt.php
 
 File Name: adopt.php
-
 -->
 
 <?php
@@ -55,57 +54,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    <link href="../css/base.css" rel="stylesheet" />
    <link href="../css/styles.css" rel="stylesheet" />
    <link href="../css/layout.css" rel="stylesheet" />
-
 </head>
 
 <body>
    <img id="logo" src="../images/fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
    <nav class="horizontal">
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../donate.html">Donate</a></li>
-        <li class="active"><a href="adopt.php">Adopt</a></li>
-        <li><a href="../volunteer.html">Volunteer</a></li>
-    </ul>
+      <ul>
+         <li><a href="index.php">Home</a></li>
+         <li><a href="../about.html">About</a></li>
+         <li><a href="donate.php">Donate</a></li>
+         <li class="active"><a href="adopt.php">Adopt</a></li>
+         <li><a href="volunteer.php">Volunteer</a></li>
+      </ul>
    </nav>
-
 
    <!-- Adoption form container -->
    <div class="form-container">
-   <h1>Adopt a Pet</h1>
-   <p>Fill out the form below to start the adoption process.</p>
+      <h1>Adopt a Pet</h1>
+      <p>Fill out the form below to start the adoption process.</p>
 
-   <?php
-   if ($success) {
-       echo "<p style='color: green;'>Adoption request submitted successfully!</p>";
-   } else {
-       foreach ($errors as $error) {
-           echo "<p style='color: red;'>$error</p>";
-       }
-   }
-   ?>
+      <?php
+      if ($success) {
+         echo "<p class='success-msg'>Adoption request submitted successfully!</p>";
+      } else {
+         foreach ($errors as $error) {
+            echo "<p class='error-msg'>$error</p>";
+         }
+      }
+      ?>
 
-   <!-- Real adoption form -->
-   <form method="POST" action="adopt.php">
-      <label for="pet_id">Select a Pet</label>
-      <select id="pet_id" name="pet_id" required>
-         <option value="">-- Choose a Pet --</option>
-         <?php foreach ($pets as $pet): ?>
-            <option value="<?php echo $pet['id']; ?>">
-               <?php echo htmlspecialchars($pet['name']); ?>
-            </option>
-         <?php endforeach; ?>
-      </select>
+      <form method="POST" action="adopt.php">
+         <label for="pet_id">Select a Pet</label>
+         <select id="pet_id" name="pet_id" required>
+            <option value="">-- Choose a Pet --</option>
+            <?php foreach ($pets as $pet): ?>
+               <option value="<?php echo $pet['id']; ?>">
+                  <?php echo htmlspecialchars($pet['name']); ?>
+               </option>
+            <?php endforeach; ?>
+         </select>
 
-      <label for="message">Why would you like to adopt this pet?</label>
-      <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+         <label for="message">Why would you like to adopt this pet?</label>
+         <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit">Submit Adoption Request</button>
-   </form>
-</div>
-
+         <button type="submit">Submit Adoption Request</button>
+      </form>
+   </div>
 
    <footer>
       Fred Animal Shelter; &copy; 2025 All Rights Reserved

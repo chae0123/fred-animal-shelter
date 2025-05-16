@@ -164,9 +164,9 @@ if ($loggedIn) {
       <ul>
          <li class="active"><a href="index.php">Home</a></li>
          <li><a href="../about.html">About</a></li>
-         <li><a href="../donate.html">Donate</a></li>
+         <li><a href="donate.php">Donate</a></li>
          <li><a href="adopt.php">Adopt</a></li>
-         <li><a href="../volunteer.html">Volunteer</a></li>
+         <li><a href="volunteer.php">Volunteer</a></li>
       </ul>
    </nav>
    
