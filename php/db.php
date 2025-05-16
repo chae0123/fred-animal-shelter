@@ -5,7 +5,7 @@
 $servername = "localhost";
 $username = "root";
 $password = ""; // default has no password
-$dbname = "fred_shelter"; //  DB name
+$dbname = "animal_shelter"; //  DB name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
