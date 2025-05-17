@@ -1,5 +1,18 @@
+<!--
+Web Programming II, CSIT-207
+Project part II
+
+Fred Animal Shelter Login Page
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: login.php
+
+http://localhost/fred-animal-shelter/php/login.php
+
+-->
+
 <?php
-// login.php
 
 session_start();            // start the session
 require_once 'db.php';      // connect to the database

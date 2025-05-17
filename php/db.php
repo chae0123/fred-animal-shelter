@@ -1,6 +1,18 @@
-<?php
+<!--
+Web Programming II, CSIT-207
+Project part II
 
-// db.php — connects to the MySQL database using mysqli using XAMPP
+Fred Animal Shelter Database connection
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: db.php
+
+// this php will connect to the MySQL database using mysqli XAMPP
+
+-->
+
+<?php
 
 $servername = "localhost";
 $username = "root";

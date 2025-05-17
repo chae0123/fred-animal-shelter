@@ -4,9 +4,10 @@ Project part II
 
 Fred Animal Shelter Homepage
 Author: Jiwon Chae and Hannah Lombardi
-Date: 3/2/2025
+Date: 5/16/2025
 
 File Name: index.php
+
 http://localhost/fred-animal-shelter/php/index.php
 
 -->

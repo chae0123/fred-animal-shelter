@@ -4,10 +4,12 @@ Project part II
 
 Fred Animal Shelter Donate Page
 Author: Jiwon Chae and Hannah Lombardi
-Date: 3/2/2025
+Date: 5/16/2025
 
-File Name: donate.html
+File Name: donate.php
+
 http://localhost/fred-animal-shelter/php/donate.php
+
 -->
 <?php
 

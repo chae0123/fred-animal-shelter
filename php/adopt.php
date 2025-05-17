@@ -2,9 +2,9 @@
 Web Programming II, CSIT-207
 Project part II
 
-Fred Animal Shelter Adopt Page
+Fred Animal Shelter Adopt application Page
 Author: Jiwon Chae and Hannah Lombardi
-Date: 3/2/2025
+Date: 5/16/2025
 
 File Name: adopt.php
 
@@ -12,6 +12,7 @@ This php is for adopt application.
 ** User login is required for this page.
 
 http://localhost/fred-animal-shelter/php/adopt.php
+
 -->
 
 <?php

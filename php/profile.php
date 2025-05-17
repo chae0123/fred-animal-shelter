@@ -1,7 +1,20 @@
+<!--
+Web Programming II, CSIT-207
+Project part II
+
+Fred Animal Shelter Profile Page
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: profile.php
+
+This page will allow a user to update their profile
+
+http://localhost/fred-animal-shelter/php/profile.php
+
+-->
+
 <?php
-// profile.php
-// allow a user to update their profile
-// http://localhost/fred-animal-shelter/php/profile.php
 
 require_once 'auth.php';
 require_once 'db.php';

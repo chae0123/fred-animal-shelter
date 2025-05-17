@@ -1,4 +1,18 @@
--- database.sql
+/*
+Web Programming II, CSIT-207
+Project part II
+
+Fred Animal Shelter Database
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: database.sql
+
+This is Fred Animal Shelter Database with sample inputs.
+
+database.sql was imported to phpMyAdmin to be used as Fred Animal Shelter Database.
+
+*/
 
 -- Create the database
 CREATE DATABASE IF NOT EXISTS animal_shelter;

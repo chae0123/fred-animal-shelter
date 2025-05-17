@@ -1,5 +1,21 @@
+<!--
+Web Programming II, CSIT-207
+Project part II
+
+Fred Animal Shelter Adopt Page
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: adoptable.php
+
+This php is for adopt main page, adoptable animals.
+
+http://localhost/fred-animal-shelter/php/adoptable.php
+
+-->
+
 <?php
-// adoptable.php
+
 require_once 'db.php';
 
 // Fetch available pets from the database

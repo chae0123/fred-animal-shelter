@@ -1,3 +1,19 @@
+<!--
+Web Programming II, CSIT-207
+Project part II
+
+Fred Animal Shelter Register Page
+Author: Jiwon Chae and Hannah Lombardi
+Date: 5/16/2025
+
+File Name: register.php
+
+This page will allow a user to register
+
+http://localhost/fred-animal-shelter/php/register.php
+
+-->
+
 <?php
 // register.php
 
