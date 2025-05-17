@@ -4,7 +4,7 @@ Project part II
 
 Fred Animal Shelter About Page
 Author: Jiwon Chae and Hannah Lombardi
-Date: 3/2/2025
+Date: 5/16/2025
 
 File Name: about.html
 
@@ -15,24 +15,30 @@ File Name: about.html
     <!-- Metadata and linked stylesheets for consistent styling across the site. -->
    <meta charset="utf-8" />
    <title>About</title>
-   <link href="base.css" rel="stylesheet" />
-   <link href="styles.css" rel="stylesheet" />
-   <link href="layout.css" rel="stylesheet" />
+   <link href="css/base.css" rel="stylesheet" />
+   <link href="css/styles.css" rel="stylesheet" />
+   <link href="css/layout.css" rel="stylesheet" />
 </head> 
 
 <body>
     <!-- Site logo displayed at the top of the page. -->
-    <img id="logo" src="fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
+    <img id="logo" src="images/fred_animal_shelter_logo.png" alt="Fred Animal Shelter" />
 
     <!--Main site navigation menu.-->
     <nav class="horizontal">
         <ul>
             <!-- List of navigation links. -->
-            <li><a href="index.html">Home</a></li>
+            <li><a href="php/index.php">Home</a></li>
             <li class="active"><a href="about.html">About</a></li><!--Highlights the active link on the nav bar.-->
-            <li><a href="donate.html">Donate</a></li>
-            <li><a href="adopt.html">Adopt</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="php/donate.php">Donate</a></li>
+            <li class="dropdown">
+                <a href="php/adoptable.php">Adopt</a>
+                <ul class="dropdown-menu">
+                    <li><a href="php/adoptable.php">Adoptable Animals</a></li>
+                    <li><a href="php/adopt.php">Application</a></li>
+                </ul>
+            </li>
+            <li><a href="php/volunteer.php">Volunteer</a></li>
         </ul>
        </nav>
 
@@ -68,8 +74,11 @@ File Name: about.html
     </div>
 </body>
 
-<!-- Footer section with copyright information. -->
+<!-- Footer -->
 <footer>
-    Fred Animal Shelter; &copy; 2025 All Rights Reserved
- </footer>
+        <p>Fred Animal Shelter; &copy; 2025 All Rights Reserved</p>
+        <p>Email: <a href="mailto:info@fredshelter.org">info@fredshelter.org</a></p>
+        <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+        <p>Address: 1234 Furry Street, Fredonia, NY 14063</p>
+    </footer>
 </html>

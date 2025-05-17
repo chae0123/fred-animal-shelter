@@ -109,7 +109,7 @@ aside p {
     text-align: center;
 	margin-top: 20px;
     width: 100%;
-    margin: 0 200px;
+    
 }
 
 /*  Form Layout Styling ======== */
@@ -134,7 +134,7 @@ form {
     align-items: center;  /* Centers everything horizontally */
     text-align: center;
     width: 100%;
-    margin: 0 200px;
+    
 }
 
 @media (max-width: 768px) {

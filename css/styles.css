@@ -21,18 +21,19 @@ html {
 /* Styles the body, setting background color and font */
 body {
    background-color: rgb(198, 217, 235);
-   font-family: Verdana, Geneva, Arial, sans-serif; 
+   font-family: Verdana, Geneva, Arial, sans-serif;
 }
 
 /* ======== Navigation Bar ======== */
 
 /* Styles for the navigation bar */
 nav.horizontal ul li {
-   background-color: rgb(18, 31, 102);  
+   background-color: rgb(18, 31, 102);
    font-size: 0.9em;
    padding: 10px 0;
-   text-align: center;     
+   text-align: center;
 }
+
 /* Styles the active page link */
 nav.horizontal li.active a {
    font-weight: bold;
@@ -40,11 +41,14 @@ nav.horizontal li.active a {
 }
 
 /* Default link colors in the navigation */
-nav.horizontal a:link, nav.horizontal a:visited {
+nav.horizontal a:link,
+nav.horizontal a:visited {
    color: rgb(250, 238, 218);
 }
+
 /* Changes color when hovering or clicking */
-nav.horizontal a:hover, nav.horizontal a:active {
+nav.horizontal a:hover,
+nav.horizontal a:active {
    color: rgb(255, 255, 64);
 }
 
@@ -92,7 +96,8 @@ form label {
 }
 
 /* Styling for input fields and dropdowns */
-form input, form select {
+form input,
+form select {
    width: 60%;
    padding: 10px;
    border: 1px solid #ccc;
@@ -102,7 +107,8 @@ form input, form select {
 }
 
 /* Focus styles when input is selected */
-form input:focus, form select:focus {
+form input:focus,
+form select:focus {
    border-color: #2c67e3;
    outline: none;
    box-shadow: 0 0 5px rgba(44, 103, 227, 0.5);
@@ -135,7 +141,8 @@ section {
 .form-container h1 {
    font-size: 2rem;
    font-weight: bold;
-   color: #2c3e50; /* Darker color for better visibility */
+   color: #2c3e50;
+   /* Darker color for better visibility */
 }
 
 
@@ -146,6 +153,10 @@ footer {
    font-size: 0.9em;
    padding: 10px 0px;
    text-align: center;
+}
+footer a {
+   color: rgb(255, 255, 255);
+   text-decoration: underline;
 }
 
 /* Styles the heading inside the about page container */
@@ -162,42 +173,47 @@ footer {
 }
 
 .user-session {
-    text-align: center;
-    margin-top: 1em;
+   text-align: center;
+   margin-top: 1em;
 }
 
 .user-profile.top-profile {
-    width: 200px;
-    margin: 2rem 0 2rem auto; /* aligns it to the right */
-    margin-right: 1rem; /* adds space from right edge */
-    text-align: center;
-    background-color: #a6caffee;
-    padding: 1em;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-    font-size: 20px;
-    display: flex;                /* enables flexbox */
-    flex-direction: column;      /* stack items vertically */
-    align-items: center;         /* center children horizontally */
-    text-align: center;
+   width: 200px;
+   margin: 2rem 0 2rem auto;
+   /* aligns it to the right */
+   margin-right: 1rem;
+   /* adds space from right edge */
+   text-align: center;
+   background-color: #a6caffee;
+   padding: 1em;
+   border-radius: 12px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+   font-size: 20px;
+   display: flex;
+   /* enables flexbox */
+   flex-direction: column;
+   /* stack items vertically */
+   align-items: center;
+   /* center children horizontally */
+   text-align: center;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #999;
-    margin-bottom: 1em;
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 3px solid #999;
+   margin-bottom: 1em;
 }
 
 .user-profile h2 {
-    margin: 0.5em 0 0.2em 0;
+   margin: 0.5em 0 0.2em 0;
 }
 
 .user-profile .bio {
-    font-size: 1rem;
-    color: #333;
+   font-size: 1rem;
+   color: #333;
 }
 
 .intro-grid {
@@ -247,8 +263,206 @@ footer {
    font-weight: bold;
    margin-top: 10px;
 }
+
 .error-msg {
    color: red;
    font-weight: bold;
    margin-top: 10px;
 }
+
+form select,
+form textarea {
+   width: 60%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1rem;
+   margin-bottom: 1em;
+}
+
+body {
+   display: block;
+   /* Override grid layout from layout.css */
+   max-width: 960px;
+   margin: 0 auto;
+   background-color: rgb(198, 217, 235);
+}
+
+/* Right-side profile section */
+.profile-container {
+   display: flex;
+   justify-content: flex-end;
+   margin: 20px 0;
+   width: 100%;
+}
+
+.user-profile.side-profile {
+   width: 70%;
+   background-color: #ffffffcc;
+   padding: 1.5em;
+   border-radius: 12px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Animals section with 4 boxes in one row */
+.intro-row {
+   display: flex;
+   justify-content: space-between;
+   gap: 15px;
+   margin: 30px 0;
+   width: 100%;
+}
+
+.intro-card {
+   flex: 1;
+   text-align: center;
+   padding: 1rem;
+}
+
+.intro-card .animal-silhouette {
+   display: block;
+   width: 80px;
+   height: auto;
+   margin: 0 auto 1rem auto;
+}
+
+.intro-card p {
+   color: rgb(95, 114, 232);
+   font-size: 0.9em;
+   margin: 0;
+}
+
+/* Testimonials section - 2 per row */
+.testimonials-container {
+   width: 100%;
+}
+
+.testimonial-row {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   margin-bottom: 20px;
+}
+
+.testimonial-box {
+   flex: 1;
+   padding: 10px;
+   display: flex;
+   align-items: flex-start;
+}
+
+.testimonial-box img {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   margin-right: 15px;
+}
+
+.testimonial-content {
+   text-align: left;
+}
+
+.testimonial-content p {
+   color: rgb(121, 121, 121);
+   font-size: 0.9em;
+   line-height: 1.2em;
+   margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .profile-container {
+      justify-content: center;
+   }
+
+   .user-profile.side-profile {
+      width: 90%;
+   }
+
+   .intro-row {
+      flex-direction: column;
+   }
+
+   .testimonial-row {
+      flex-direction: column;
+   }
+}
+
+/* Dropdown base */
+nav.horizontal ul li.dropdown {
+   position: relative;
+}
+
+nav.horizontal ul li.dropdown ul.dropdown-menu {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: rgb(18, 31, 102);
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   z-index: 1000;
+   width: 180px; /* optional: fixed width */
+}
+
+/* Show dropdown on hover */
+nav.horizontal ul li.dropdown:hover ul.dropdown-menu {
+   display: block;
+}
+
+/* Make links inside dropdown appear vertically */
+nav.horizontal ul li.dropdown ul.dropdown-menu li {
+   display: block;
+   padding: 10px;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   float: none; /* Override the float */
+}
+
+/* Dropdown link styles */
+nav.horizontal ul li.dropdown ul.dropdown-menu li a {
+   color: rgb(250, 238, 218);
+   text-decoration: underline;
+   display: block;
+}
+
+nav.horizontal ul li.dropdown ul.dropdown-menu li a:hover {
+   background-color: rgb(44, 66, 150);
+}
+
+.adoptable-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin: 30px 0;
+}
+
+.pet-card {
+   background-color: #fff;
+   border-radius: 12px;
+   padding: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   width: 220px;
+}
+
+.pet-card img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 10px;
+}
+
+.pet-card h3 {
+   margin: 0.5em 0 0.3em;
+}
+
+.pet-card p {
+   font-size: 0.9em;
+   color: #444;
+   }

@@ -78,7 +78,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="index.php">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="donate.php">Donate</a></li>
-        <li><a href="adopt.php">Adopt</a></li>
+        <li class="dropdown">
+                <a href="adoptable.php">Adopt</a>
+                <ul class="dropdown-menu">
+                    <li><a href="adoptable.php">Adoptable Animals</a></li>
+                    <li><a href="adopt.php">Application</a></li>
+                </ul>
+            </li>
         <li class="active"><a href="volunteer.php">Volunteer</a></li>
     </ul>
    </nav>
@@ -117,7 +123,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    </div>
 
    <footer>
-      Fred Animal Shelter; &copy; 2025 All Rights Reserved
-   </footer>
+        <p>Fred Animal Shelter; &copy; 2025 All Rights Reserved</p>
+        <p>Email: <a href="mailto:info@fredshelter.org">info@fredshelter.org</a></p>
+        <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+        <p>Address: 1234 Furry Street, Fredonia, NY 14063</p>
+    </footer>
 </body>
 </html>

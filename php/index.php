@@ -41,118 +41,7 @@ if ($loggedIn) {
    <link href="../css/base.css" rel="stylesheet" />
    <link href="../css/styles.css" rel="stylesheet" />
    <link href="../css/layout.css" rel="stylesheet" />
-   <style>
-      /* Additional styles for the new layout structure */
-      body {
-         display: block; /* Override grid layout from layout.css */
-         max-width: 960px;
-         margin: 0 auto;
-         background-color: rgb(198, 217, 235);
-      }
-
-      /* Right-side profile section */
-      .profile-container {
-         display: flex;
-         justify-content: flex-end;
-         margin: 20px 0;
-         width: 100%;
-      }
-
-      .user-profile.side-profile {
-         width: 70%;
-         background-color: #ffffffcc;
-         padding: 1.5em;
-         border-radius: 12px;
-         box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-
-      /* Animals section with 4 boxes in one row */
-      .intro-row {
-         display: flex;
-         justify-content: space-between;
-         gap: 15px;
-         margin: 30px 0;
-         width: 100%;
-      }
-
-      .intro-card {
-         flex: 1;
-         text-align: center;
-         padding: 1rem;
-      }
-
-      .intro-card .animal-silhouette {
-         display: block;
-         width: 80px;
-         height: auto;
-         margin: 0 auto 1rem auto;
-      }
-
-      .intro-card p {
-         color: rgb(95, 114, 232);
-         font-size: 0.9em;
-         margin: 0;
-      }
-
-      /* Testimonials section - 2 per row */
-      .testimonials-container {
-         width: 100%;
-      }
-
-      .testimonial-row {
-         display: flex;
-         justify-content: space-between;
-         gap: 20px;
-         margin-bottom: 20px;
-      }
-
-      .testimonial-box {
-         flex: 1;
-         padding: 10px;
-         display: flex;
-         align-items: flex-start;
-      }
-
-      .testimonial-box img {
-         width: 80px;
-         height: 80px;
-         border-radius: 50%;
-         margin-right: 15px;
-      }
-
-      .testimonial-content {
-         text-align: left;
-      }
-
-      .testimonial-content p {
-         color: rgb(121, 121, 121);
-         font-size: 0.9em;
-         line-height: 1.2em;
-         margin: 0;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-         .profile-container {
-            justify-content: center;
-         }
-
-         .user-profile.side-profile {
-            width: 90%;
-         }
-
-         .intro-row {
-            flex-direction: column;
-         }
-
-         .testimonial-row {
-            flex-direction: column;
-         }
-      }
-   </style>
+   
 </head>
 
 <body>
@@ -165,7 +54,13 @@ if ($loggedIn) {
          <li class="active"><a href="index.php">Home</a></li>
          <li><a href="../about.html">About</a></li>
          <li><a href="donate.php">Donate</a></li>
-         <li><a href="adopt.php">Adopt</a></li>
+         <li class="dropdown">
+                <a href="adoptable.php">Adopt</a>
+                <ul class="dropdown-menu">
+                    <li><a href="adoptable.php">Adoptable Animals</a></li>
+                    <li><a href="adopt.php">Application</a></li>
+                </ul>
+            </li>
          <li><a href="volunteer.php">Volunteer</a></li>
       </ul>
    </nav>
@@ -197,7 +92,6 @@ if ($loggedIn) {
       </p>
    </div>
    <?php endif; ?>
-
 
    <!-- Animal Boxes - 4 in one row -->
    <div class="intro-row">
@@ -278,7 +172,10 @@ if ($loggedIn) {
 
    <!-- Footer -->
    <footer>
-      Fred Animal Shelter; &copy; 2025 All Rights Reserved
-   </footer>
+        <p>Fred Animal Shelter; &copy; 2025 All Rights Reserved</p>
+        <p>Email: <a href="mailto:info@fredshelter.org">info@fredshelter.org</a></p>
+        <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+        <p>Address: 1234 Furry Street, Fredonia, NY 14063</p>
+    </footer>
 </body>
 </html>
